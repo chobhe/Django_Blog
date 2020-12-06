@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+<html>
+<head>
+  {%block edit%}
+    .title{
+      font-size: 40px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+    }
+    .author{
+      font-size: 30px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+    }
+    .entry{
+      font-size:20px;
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      margin-Left : 150px;
+      margin-Right : 150px;
+    }
+  {%endblock%}
+
+
+
+  <title>
+    {% block title %}
+      {{ls.title}}
+    {% endblock %}
+
+  </title>
+</head>
+<body>
+  {% block content%}
+    <h1 class = title>{{ls.title}}</h1>
+    <h2 class = author>by {{ls.author}}<h2>
+    <p class = entry> {{ls.entry}} </p>
+
+  {%endblock%}
+  {%block margins%}
+    {% if ls.im%}
+      <img src = '{{ls.im.url}}' width = 300>
+    {%endif%}
+  {%endblock%}
+
+</body>
+
+</html>

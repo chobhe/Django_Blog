@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+<!--view all the blog storages and be able to click on them and redirect you each of the storage pages -->
+<html>
+<head>
+
+{% block edit %}
+  .block_storage a{
+    padding : 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+    display:block;
+
+  }
+
+  .block_storage a:hover {
+    color: 	#800000
+  }
+
+  h2 {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+  }
+{% endblock %}
+
+
+
+  <title>
+    {% block title %}
+      Yessir
+    {% endblock %}
+  </title>
+
+</head>
+
+
+<body>
+
+  {% block content %}
+  <h2> Article Category </h2>
+  <p> Click on the category to view the different articles in each category </p>
+
+
+  <div class = 'block_storage'>
+    <ol>
+      {% for object in ls %}
+        <li><a href= "/{{object.id}}"> {{object.title}} </a></li>
+
+      {% endfor %}
+
+    </ol>
+  </div>
+
+  {%endblock%}
+
+</body>
+<html>

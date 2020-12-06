@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Create Blog Storage
+{% endblock %}
+
+{% block edit %}
+  h3 {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+  }
+{%endblock%}
+
+
+
+
+{% block content %}
+  {%if user.is_authenticated%}
+    <h3>Create Blog Storages</h3>
+    <br>
+    <br>
+    <form method = 'post' action = '/create/' class = 'forms'>
+      {% csrf_token %} <!-- need this for every form we create-->
+      <div class = 'input-group mb-3'>
+        <div class = 'input-group-prepend'>
+          <button type = 'submit', name = 'save' class = 'btn btn-outline-success'>Create New</button>
+        </div>
+        {{form.title}}
+      </div>
+    </form>
+  {%else%}
+    <h3>Please Login Before Creating a Blog Category</h3>
+  {%endif%}
+
+{% endblock %}

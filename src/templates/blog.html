@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+<head>
+  {%block edit%}
+    .label{
+      margin-Left:15px;
+    }
+
+  {% endblock %}
+
+  {% block title %}
+    Chob's Blogspot
+  {% endblock %}
+</head>
+
+{% block content %}
+    <h1>{{ls.title}} Articles</h1>
+    <p>Check boxes if the article has been read, then click done to submit</p>
+    <form method = 'post' action = '#', enctype="multipart/form-data">
+      {% csrf_token %} <!-- need this for every form we create right under the form creation-->
+
+      {%for blog in ls.blog_set.all %}
+        <div class ='input-group mb-3'>
+          <div class = 'input-group-prepend'>
+            <div class = 'input-group-text'>
+              {%if blog.read == True%}
+                <input type = 'checkbox', value = 'read', name = 'c{{blog.id}}'checked>
+
+              {%else%}
+                <input type = 'checkbox', value = 'read', name = 'c{{blog.id}}'>
+
+              {%endif%}
+            </div>
+
+          </div>
+        <a href = '/b{{blog.id}}' class = 'label'> {{blog.title}} By {{blog.author}} , Prev: {{blog.preview}} </a>
+
+        </div>
+      {%endfor%}
+
+      <button type = 'submit', name = 'done?', value = 'done?', class = 'btn btn-outline-success'>Done</button>  <!-- used to update whether the item is read or not -->
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Title</div>
+          </div>
+          <input type = 'text', name = 'title', class="form-control" aria-label="Small">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Author</div>
+            </div>
+            <input type = 'text', name = 'author', class="form-control" aria-label="Small">
+          </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Preview</div>
+            </div>
+            <input type = 'text', name = 'preview', class="form-control" aria-label="Small">
+          </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Image</div>
+            </div>
+            <input type="file" id="img" name="img" accept="image/*">
+          </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Entry</div>
+          </div>
+          <textarea name="article", class="form-control"></textarea>  <!-- may need to put id = 'msg' before the name -->
+        </div>
+
+
+      <button type = 'submit', name = 'New Article', value = 'New Article', class = 'btn btn-outline-success'>Add Article</button>
+
+
+
+
+
+    </form>
+    <p> {{x}}</p>
+
+{% endblock %}
+
+<!-- a number in the browser eg 1,2,3 will bring up each unique blog_storage where we'll store unique blogs that fit each blog_storages categpru -->

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<html>
+<head>
+{%block edit%}
+  img.animated-gif {
+    width: 1000px;
+    height: auto;
+  }
+  h2 {
+
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    font-weight : bold;
+    color: #FFA781;
+    display:block;
+
+  }
+
+{%endblock%}
+
+</head>
+
+<body>
+
+{% block content %}
+
+
+
+  <div class = 'image'>
+    <img class="animated-gif" src = "media/images/giphy.gif", alt = 'welcome to the Chob Blog'>
+  </div>
+  <br>
+  <br>
+  <br>
+  <h2> Shock the World </h2>
+
+
+
+  <p>{{user}}</p>
+{% endblock %}
+
+
+</body>
+</html>

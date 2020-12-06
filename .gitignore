@@ -1,0 +1,6 @@
+env
+.DS_Store
+/src/.DS_Store
+/src/db.sqlite3
+/src/website_chob/settings.py
+/src/media
