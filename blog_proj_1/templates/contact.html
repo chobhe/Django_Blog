@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%block edit%}
+    h2 {
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+    }
+
+
+    .me_photo img{
+        margin: auto 5px;
+        float: left;
+        width: 250px;
+        height: auto;
+}
+
+
+    p {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 20px;
+      text-align: center;
+    }
+    .girlfriend img.animated-gif {
+      width: 300px;
+      height: auto;
+    }
+    .friends img{
+      width: 500px;
+      height:auto;
+    }
+    .pigs img{
+      width: 200px;
+      height:auto;
+    }
+
+    .fam img {
+      width: 500px;
+      height:auto;
+    }
+    h3 {
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+      font-weight: bold;
+      color: 	#000080;
+    }
+
+  {%endblock%}
+
+
+  <title>
+    {% block title %}
+    About Me
+    {% endblock %}
+
+  </title>
+
+</head>
+
+
+<body>
+  {%block content%}
+    <h2> About Me </h2>
+    <div class = 'me_photo'>
+      <div style = 'position :absolute; width :1270px; height :260px; top: 240px; Left :570px;background-color:#C0C0C0'></div>
+        <img style = 'position:absolute; top: 200px; left:300px;' src=  "/media/images/new_me.jpg" alt="Me">
+        <p style = 'position:absolute; top: 250px; left:600px;'>My name is Charles He and I'm currently a Freshman at UC Berkeley studying computer science. Some of my interests are tech, mechanical keyboards,</p>
+        <p style = 'position:absolute; top: 285px; left:600px;'>  and weightlifting(pre-corona at least) </p>
+
+        <p style = 'position:absolute; top: 340px; left:600px;'>  Contact me at 408-752-6151 or cyhe@berkeley.edu</p>
+
+        <p style = 'position:absolute; top: 400px; left:600px;'> I love korean food, chinese food and ice cream (even though I'm lactose :0)</p>
+        <p style = 'position:absolute; top: 435px; left:600px;'> I'm currently 6'2" and have decided I'm not a web developer</p>
+
+    </div>
+
+
+
+    <div class = 'girlfriend'>
+      <img class = "animated-gif" style = 'position:absolute; top: 640px; left:300px; 'src=  "/media/images/girlfriend.GIF" alt="Me">
+    </div>
+
+
+    <div class = 'friends'>
+      <img style = 'position:absolute; top: 640px; left:610px; 'src=  "/media/images/friends.JPG" alt="Me">
+    </div>
+
+    <div class = 'pigs'>
+      <img style = 'position:absolute; top: 640px; left:1120px; 'src=  "/media/images/pigs.PNG" alt="Me">
+    </div>
+
+    <div class = 'fam'>
+      <img style = 'position:absolute; top: 640px; left:1330px; 'src=  "/media/images/fam.jpg" alt="Me">
+    </div>
+
+
+
+  {%endblock%}
+
+
+</body>
+
+</html>

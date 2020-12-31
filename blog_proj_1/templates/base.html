@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <style type = 'text/css'>
+    .sidebar{
+      height :100%;
+      width :250px;
+      position :fixed;
+      z-index : 1;
+      top : 0;
+      Left : 0;
+      background-color: #000000;
+      overflow-x : : hidden;
+      padding-top : 20px;
+
+    }
+
+    .sidebar a {
+      padding : 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 30px;
+      color: 	#FFFFFF;
+      display:block;
+
+    }
+    h1 {
+      text-align:center;
+      font-family: "Garamond", Times, serif;
+      color:#5B0E2D
+    }
+
+    .sidebar a:hover {
+      font-weight : bold;
+      color: #808080;
+    }
+
+    .main {
+      margin-Left : 300px;
+      padding: 0px 10px;
+    }
+
+    .margin {
+      margin-Left:250px;
+
+      padding:30px 30px 0px 30px;
+    }
+    {% block edit %}
+    {% endblock %}
+
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>
+    {% block title %}
+    Chob's Webpage
+    {% endblock %}
+
+  </title>
+</head>
+<body>
+  <div class = 'sidebar'>
+    <a href = '/'>Home</a>
+    <a href = '/contact'>About Me</a>
+    <a href = '/projects'> Projects</a>
+    <a href = '/login'>Login</a>
+    <a href = '/create'>Create Divider</a>
+    <a href = '/view'>View</a>
+    <a href = '/logout'>Logout</a>
+  </div>
+
+  <div id = 'margin', name = 'margin', class = 'margin'>
+    {% block margins %}
+
+    {%endblock%}
+  </div>
+
+  <div id = 'content', name = 'content', class = 'main'>
+    <div class = 'row justify-content-center'>
+      <div class = 'col-8>'>
+
+        <h1 class = 'mt-2'>Chob's Blogs</h1>
+        <hr class = 'mt-0 mb-4'>
+
+        {% block content %}
+          replace stuff in between these two blocks from other html files. THis is inheritance
+        {% endblock %}
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
+
+<!--template for all the inheriting html files-->

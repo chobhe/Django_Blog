@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%block edit%}
+    h2 {
+      font-family: "Times New Roman", Times, serif;
+      text-align: center;
+    }
+
+    h4 {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: bold;
+    }
+
+
+  {%endblock%}
+</head>
+<body>
+  {%block content%}
+    <h2> Chob's Programming Projects </h2>
+    <div class = 'snake-video and django-website'>
+      <div style = 'position :absolute; width :800px; height :212px; top: 200px; Left :300px;background-color:#6699cc;'></div>
+
+      <h4 style = 'position:absolute; top:220px;left:630px;'> Snake Game</h4>
+      <p style = 'position:absolute; top: 280px; left:350px;'> •	Developed a personalized version of the classical game snake </p>
+      <p style = 'position:absolute; top: 320px; left:350px;'> •	Used Git, Tkinter, Python, and image processing libraries </p>
+      <p style = 'position:absolute; top: 360px; left:350px;'> •	Used a GUI to customize the game and surprise my girlfriend with custom photos of us </p>
+
+      <video style = 'position:absolute; top: 200px; left:1130px; width:700px; height:auto;' controls>
+        <source src=  "/media/images/Lauren_Snake_demo.mp4" type = 'video/mp4'>
+      Your browser probably doesn't support the vid g
+      </video>
+
+      <div style = 'position :absolute; width :800px; height :198px; top: 425px; Left :300px;background-color:#79CDCD;'></div>
+      <h4 style = 'position:absolute; top:440px;left:580px;'> This Blog Check It Out </h4>
+      <p style = 'position:absolute; top: 500px; left:350px;'> • Architected a custom website that records and organizes blog entries</p>
+      <p style = 'position:absolute; top: 540px; left:350px;'> • Created with Python and it’s Django Framework </p>
+      <p style = 'position:absolute; top: 580px; left:350px;'> • Utilized HTML/CSS/Bootstrap/JS and used to record my own thoughts and creations </p>
+
+    </div>
+    <div class = 'reinforced learning snake'>
+      <div style = 'position :absolute; width :800px; height :393px; top: 650px; Left :300px;background-color:#17DEEE;'></div>
+
+      <h4 style = 'position:absolute; top:670px;left:530px;'> Reinforced Learning Snake Game</h4>
+      <p style = 'position:absolute; top: 730px; left:350px;'> •	Constructed with Tensorflow, Reinforced learning agents, Numpy, Pygame, Pickle and Python </p>
+      <p style = 'position:absolute; top: 800px; left:350px;'> •	Utilized a deep Q network and the Adam optimizer </p>
+      <p style = 'position:absolute; top: 870px; left:350px;'> •	Achieved a better score than most human players in less than 50,000 iterations. </p>
+      <p style = 'position:absolute; top: 940px; left:350px;'> •	Evaluation games and human playable GUI created with Pygame. </p>
+
+      <video style = 'position:absolute; top: 650px; left:1130px; width:700px; height:auto;' controls>
+        <source src=  "/media/images/ReinforcedLearningDemo.mp4" type = 'video/mp4'>
+      Your browser probably doesn't support the vid g
+      </video>
+
+
+
+
+    </div>
+
+  {%endblock%}
+
+</body>
+</html>
