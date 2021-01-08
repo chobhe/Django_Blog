@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
+    'gunicorn',
     'pages',
     'blog',
     'crispy_forms',
