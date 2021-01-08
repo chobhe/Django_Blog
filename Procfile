@@ -1,1 +1,1 @@
-web: gunicorn website_chob.wsgi --log-file -
+web: gunicorn blog_proj_1/website_chob.wsgi --log-file -
