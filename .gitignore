@@ -1,6 +1,4 @@
 env
 .DS_Store
 /blog_proj_1/.DS_Store
-/blog_proj_1/db.sqlite3
-/blog_proj_1/website_chob/settings.py
 /blog_proj_1/media
