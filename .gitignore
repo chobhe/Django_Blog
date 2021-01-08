@@ -1,3 +1,4 @@
 env
 .DS_Store
 /blog_proj_1/.DS_Store
+**/__pycache__
