@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['charliehe.herokuapp.com', '127.0.0.1']
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "live-static", "media-root")
+MEDIA_ROOT = os.path.join(BASE_DIR, "live-static", "media-root/media")
 
 MEDIA_URL = '/media/'
 
