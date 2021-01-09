@@ -28,7 +28,8 @@
       <p style = 'position:absolute; top: 360px; left:350px;'> •	Used a GUI to customize the game and surprise my girlfriend with custom photos of us </p>
 
       <video style = 'position:absolute; top: 200px; left:1130px; width:700px; height:auto;' controls>
-        <source src=  "/media/images/Lauren_Snake_demo.mp4" type = 'video/mp4'>
+        {% load static %}
+        <source src=  "{% static "/media-root/media/images/Lauren_Snake_demo.mp4" %}" type = 'video/mp4'>
       Your browser probably doesn't support the vid g
       </video>
 
@@ -49,7 +50,8 @@
       <p style = 'position:absolute; top: 940px; left:350px;'> •	Evaluation games and human playable GUI created with Pygame. </p>
 
       <video style = 'position:absolute; top: 650px; left:1130px; width:700px; height:auto;' controls>
-        <source src=  "/media/images/ReinforcedLearningDemo.mp4" type = 'video/mp4'>
+        {% load static %}
+        <source src=  "{% static "/media-root/media/images/ReinforcedLearningDemo.mp4" %}" type = 'video/mp4'>
       Your browser probably doesn't support the vid g
       </video>
 

@@ -64,7 +64,8 @@
     <h2> About Me </h2>
     <div class = 'me_photo'>
       <div style = 'position :absolute; width :1270px; height :260px; top: 240px; Left :570px;background-color:#C0C0C0'></div>
-        <img style = 'position:absolute; top: 200px; left:300px;' src=  "/media/images/new_me.jpg" alt="Me">
+        {% load static %}
+        <img style = 'position:absolute; top: 200px; left:300px;' src=  "{% static "/media-root/media/images/new_me.jpg" %}" alt="Me">
         <p style = 'position:absolute; top: 250px; left:600px;'>My name is Charles He and I'm currently a Freshman at UC Berkeley studying computer science.</p>
         <p style = 'position:absolute; top: 285px; left:600px;'>Some of my interests are tech, mechanical keyboards, and weightlifting(pre-corona at least) </p>
 
@@ -78,16 +79,19 @@
 
 
     <div class = 'girlfriend'>
-      <img class = "animated-gif" style = 'position:absolute; top: 640px; left:300px; 'src=  "/media/images/girlfriend.GIF" alt="Me">
+      {% load static %}
+      <img class = "animated-gif" style = 'position:absolute; top: 640px; left:300px; 'src=  "{% static "/media-root/media/images/girlfriend.GIF" %}" alt="Me">
     </div>
 
 
     <div class = 'friends'>
-      <img style = 'position:absolute; top: 640px; left:610px; 'src=  "/media/images/friends.JPG" alt="Me">
+      {% load static %}
+      <img style = 'position:absolute; top: 640px; left:610px; 'src=  "{% static "/media-root/media/images/friends.JPG" %}" alt="Me">
     </div>
 
     <div class = 'pigs'>
-      <img style = 'position:absolute; top: 640px; left:1120px; 'src=  "/media/images/pigs.png" alt="Me">
+      {% load static %}
+      <img style = 'position:absolute; top: 640px; left:1120px; 'src=  "{% static "/media-root/media/images/pigs.png" %}" alt="Me">
     </div>
 
     <div class = 'fam'>
